@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>places in shimoga</title>
+
+  <style>
+    body
+    {
+
+    background-image:url({{url_for('static',filename="white-wallpaper.jpg")}});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size:cover;
+	background-position:center;
+
+    margin:50px;
+    padding:50px;
+    }
+
+    h1{
+    margin-top:0px;
+    margin-bottom:20px;
+    font-size:80px;
+    text-aligned:center;
+    color:white;
+    background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+    padding:0 10px 0 30px;
+    border-radius:30%;
+    border:5px solid white;
+    }
+
+
+    .card{
+    height:450px;
+    margin-top:15px;
+    box-shadow:12px 10px 2px gray;
+    }
+
+
+    .card-body
+    {
+   background-color:lightgray;
+    }
+
+
+    .card-body a{
+     width:100px;
+     text-align:center;
+     font-size:20px;
+     border:3px solid white;
+     }
+
+     .card-body a:hover{
+     width:110px;
+     height:50px;
+     font-size:30px;
+     border:3px solid white;
+     }
+
+  </style>
+
+
+</head>
+<body>
+<h1>Top 10 Places To Visit In SHIMOGA</h1>
+
+
+
+<div class="card-columns">
+  <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="jogfa.jpg")}}">
+    <img class="card-img-top" src="{{url_for('static',filename="jogfa.jpg")}}" alt="Card image" style="width:100%">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">Jog Falls</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="https://www.bing.com/search?q=jogfalls&cvid=a0f94e3fe601420e8ff06810301603a0&FORM=ANAB01&PC=HCTS" class="btn btn-success">visit</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="sharavathi-valley (2).jpg")}}">
+    <img class="card-img-top" src="{{url_for('static',filename="sharavathi-valley (2).jpg")}}" alt="Card image" style="width:100%">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">Sharavathi-River</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="https://www.bing.com/search?q=sharavathi+river&cvid=97c462de666a437fb2c95152f5e28ae5&pglt=43&FORM=ANNTA1&PC=HCTS" class="btn btn-success">visit</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="linganm.jpg")}}">
+    <img class="card-img-top" src="{{url_for('static',filename="linganm.jpg")}}" alt="Card image" style="width:100%">
+  </a>
+    <div class="card-body">
+      <h4 class="card-title">Linganamakki-Dam</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="https://www.bing.com/search?q=linganamakki+dam&FORM=AWRE" class="btn btn-success">visit</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="ikkeri.jpg")}}">
+    <img class="card-img-top" src="{{url_for('static',filename="ikkeri.jpg")}}" alt="Card image" style="width:100%">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">Ikkeri Temple</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="https://www.bing.com/search?q=ikkeri&cvid=2d35ab3865fb4eaca0e0854da2a7acbc&pglt=43&FORM=ANNTA1&PC=HCTS" class="btn btn-success">visit</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="sigan.jpg")}}">
+    <img class="card-img-top" src="{{url_for('static',filename="sigan.jpg")}}" alt="Card image" style="width:100%">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">Sigandur Chowdeshwary Temple</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="https://www.bing.com/search?q=sigandur+chowdeshwari&qs=n&form=QBRE&sp=-1&ghc=2&pq=sigandur+c&sc=8-10&sk=&cvid=3FF60F050C9F4623997E14E98E15A131" class="btn btn-success">visit</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="keladi.jpg")}}">
+    <img class="card-img-top" src="{{url_for('static',filename="keladi.jpg")}}" alt="Card image" style="width:100%">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">Keladi</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="https://www.bing.com/search?q=keladi&go=Search&qs=ds&form=QBRE" class="btn btn-success">visit</a>
+    </div>
+  </div>
+
+
+
+  <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="bhadra river.jpg")}}">
+    <img class="card-img-top"  src="{{url_for('static',filename="bhadra river.jpg")}}" alt="Card image" style="width:100%">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">Bhadra River Project Dam</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="https://www.bing.com/search?q=bhadra+river+project&qs=AS&pq=bhadra+river+pro&sc=1-16&cvid=23955BD28B94484C9AAE2F9A6044EABB&FORM=QBRE&sp=1" class="btn btn-success">visit</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="li tiger.jpg")}}">
+    <img class="card-img-top" src="{{url_for('static',filename="li tiger.jpg")}}" alt="Card image" style="width:100%">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">Lion & Tiger Safari</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="https://www.bing.com/search?q=lion+and+tiger+safari&qs=n&form=QBRE&sp=-1&pq=lion+and+tiger+safa&sc=1-19&sk=&cvid=1730F5F1767D4A17BF0B8CDDD0D30FEB" class="btn btn-success">visit</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="kodc.jpg")}}">
+    <img class="card-img-top" src="{{url_for('static',filename="kodc.jpg")}}" alt="Card image" style="width:100%">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">kodachadri</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="https://www.bing.com/search?q=kodachadri&qs=n&form=QBRE&sp=-1&pq=kodachadr&sc=8-9&sk=&cvid=5E4E2C3860B441B9A08DECB8EABC4E1F" class="btn btn-success">visit</a>
+    </div>
+  </div>
+
+
+
+  <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="dabbe-falls-shimoga.jpg")}}">
+    <img class="card-img-top" src="{{url_for('static',filename="dabbe-falls-shimoga.jpg")}}" alt="Card image" style="width:100%;height:250px;">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">Dabbe falls</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="https://www.bing.com/search?q=Dabbe+Falls&FORM=HDRSC1" class="btn btn-success">visit</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="maritayi.jpg")}}">
+    <img class="card-img-top" src="{{url_for('static',filename="maritayi.jpg")}}" alt="Card image" style="width:100%">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">Marikamba temple</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="https://www.bing.com/search?q=Marikamba+Temple%2c+Sagar&FORM=HDRSC1" class="btn btn-success">visit</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="kavaledurga.JPG")}}">
+    <img class="card-img-top" src="{{url_for('static',filename="kavaledurga.JPG")}}"  alt="Card image" style="width:100%">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">Kavale Durga</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="https://www.bing.com/search?q=kavaledurga&qs=n&form=QBRE&sp=-1&pq=kavaledu&sc=7-8&sk=&cvid=A13CE5A628E249809314816DC51CCECE" class="btn btn-success">visit</a>
+    </div>
+  </div>
+
+
+</body>
+</html>

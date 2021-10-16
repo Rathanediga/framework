@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+<style>
+
+
+
+
+body
+    {
+    background-size:cover;
+    background-position:center;
+    background-image:url({{url_for('static',filename="jhgf.jpg")}})
+
+    }
+
+.containerr{
+  height: 250px;
+  width: 230px;
+  position: relative;
+ margin-left:250px;
+
+}
+.containerr .wrapper{
+  position: relative;
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+ background-color:#ffffe6;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.wrapper.active{
+  border: none;
+}
+.wrapper .image{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+
+}
+.wrapper img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+.wrapper .icon{
+  font-size: 100px;
+  color: #9658fe;
+  padding-left:20px;
+}
+.wrapper .text{
+  font-size: 20px;
+  font-weight: 500;
+  color: #5B5B7B;
+}
+.wrapper #cancel-btn i{
+  position: absolute;
+  font-size: 20px;
+  right: 15px;
+  top: 15px;
+  color: #9658fe;
+  cursor: pointer;
+  display: none;
+}
+.wrapper.active:hover #cancel-btn i{
+  display: block;
+}
+.wrapper #cancel-btn i:hover{
+  color: #e74c3c;
+}
+.wrapper .file-name{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 8px 0;
+  font-size: 18px;
+  color: #fff;
+  display: none;
+  background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
+}
+.wrapper.active:hover .file-name{
+  display: block;
+}
+.containerr #custom-btn{
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
+}
+
+
+#a1
+    {
+         width:800px;
+         color:white;
+         background-color:black;
+         padding:10px 0px 10px 0px;
+         text-align:center;
+         border-radius:15px 15px 0px 0px;
+         margin:auto;
+
+    }
+
+    .main
+    {
+    width:800px;
+    height:950px;
+    margin:auto;
+    background-color:rgb(0,0,0,0.4);
+    }
+
+  .form-group,.enter
+    {
+    padding:20px;
+    color:white;
+    }
+
+
+    #first
+    {
+    width:300px;
+    position:relative;
+    left:10px;
+    top:15px;
+    line-height:auto;
+    border-radius:6px;
+    padding:0px 22px;
+    font-size:16px;
+
+    }
+
+
+     #last
+    {
+    width:300px;
+    float:right;
+    position:relative;
+    right:200px;
+    top:-75px;
+     line-height:auto;
+    border-radius:6px;
+    padding:0px 22px;
+    font-size:16px;
+    margin-bottom:-15px;
+    }
+
+
+    </style>
+
+<script>
+      const wrapper = document.querySelector(".wrapper");
+      const fileName = document.querySelector(".file-name");
+      const defaultBtn = document.querySelector("#default-btn");
+      const customBtn = document.querySelector("#custom-btn");
+      const cancelBtn = document.querySelector("#cancel-btn i");
+      const img = document.querySelector("img");
+      let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+      function defaultBtnActive(){
+        defaultBtn.click();
+      }
+      defaultBtn.addEventListener("change", function(){
+        const file = this.files[0];
+        if(file){
+          const reader = new FileReader();
+          reader.onload = function(){
+            const result = reader.result;
+            img.src = result;
+            wrapper.classList.add("active");
+          }
+          cancelBtn.addEventListener("click", function(){
+            img.src = "";
+            wrapper.classList.remove("active");
+          })
+          reader.readAsDataURL(file);
+        }
+        if(this.value){
+          let valueStore = this.value.match(regExp);
+          fileName.textContent = valueStore;
+        }
+      });
+    </script>
+
+  <!--
+
+<script>
+alert("you are in registration page")
+
+function first()
+{
+var name=form.name.value;
+var lname=form.lname.value;
+var pass=form.pswd.value;
+var pno=form.phno.value;
+
+if(name=="" || lname=="" || pass=="" || pno=="")
+{
+alert("please enter all the details");
+return false;
+}
+
+
+var nmptrn=/^([A-z][a-z]{1,15})$/;
+if(!(nmptrn.test(lname)))
+{
+alert("please enter first name")
+return false;
+}
+
+var lnmptrn=/^([A-z][a-z]{1,15})$/;
+if(!(lnmptrn.test(lname)))
+{
+alert("please enter last name")
+return false;
+}
+
+var pswdptrn=/^(?=.*[A-z])(?=.*[a-z])(?=.*[0-9])(?=.*[!#@$%^&*]).{8,}$/;
+if(!(pswdptrn.test(pass)))
+{
+alert("please enter valid password")
+return false;
+}
+
+var pnptrn=/^([9876][0-9]{9})$/;
+if(!(pnptrn.test(pno)))
+{
+alert("plaese enter correct num")
+return false;
+}
+
+return true;
+}
+
+</script>
+  -->
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+  <h1 id="a1">Registration Page</h1>
+  <form class="main" action="{{ url_for('registration') }}" method="POST" name="form" onsubmit="return first()">
+
+    <div id="first" class="form-group">
+      <label>First Name:</label>
+      <input type="text" class="form-control"  placeholder="Enter first name" name="name" required>
+    </div>
+
+    <div id="last" class="form-group">
+      <label id="g">Last Name:</label>
+      <input type="text" class="form-control"  placeholder="Enter last name" name="lname" required>
+    </div>
+
+    <div id="d" class="form-group">
+      <label>phno:</label>
+      <input type="text" class="form-control"  placeholder="Enter 10 dig pno" name="pno" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+    </div>
+
+
+
+
+
+          <div class="containerr">
+      <div class="wrapper">
+
+<div class="content">
+          <div class="icon">
+<i class="fas fa-cloud-upload-alt"></i></div>
+<div class="text">No file chosen, yet!</div>
+</div>
+<div id="cancel-btn">
+<i class="fas fa-times"></i></div>
+<div class="file-name">
+File name here</div>
+</div>
+<button onclick="defaultBtnActive()" id="custom-btn">Choose a file</button>
+      <input id="default-btn" type="file" hidden>
+    </div>
+
+
+     <div class="enter">
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="custom-control custom-switch" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>Multi Step Form | CodingNepal</title> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+
+      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: url("bg.png"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+}
+::selection{
+  color: #fff;
+  background: #d43f8d;
+}
+.container{
+  width: 330px;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px 35px 10px 35px;
+}
+.container header{
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+.container .form-outer{
+  width: 100%;
+  overflow: hidden;
+}
+.container .form-outer form{
+  display: flex;
+  width: 400%;
+}
+.form-outer form .page{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .page .title{
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+.form-outer form .page .field{
+  width: 330px;
+  height: 45px;
+  margin: 45px 0;
+  display: flex;
+  position: relative;
+}
+form .page .field .label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+form .page .field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+form .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+form .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #d33f8d;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field button:hover{
+  background: #000;
+}
+form .page .btns button{
+  margin-top: -20px!important;
+}
+form .page .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
+}
+form .page .btns button.next{
+  margin-left: 3px;
+}
+.container .progress-bar{
+  display: flex;
+  margin: 40px 0;
+  user-select: none;
+}
+.container .progress-bar .step{
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.container .progress-bar .step p{
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.progress-bar .step .bullet{
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.progress-bar .step .bullet.active{
+  border-color: #d43f8d;
+  background: #d43f8d;
+}
+.progress-bar .step .bullet span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar .step .bullet.active span{
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+  position: absolute;
+  content: '';
+  bottom: 11px;
+  right: -51px;
+  height: 3px;
+  width: 44px;
+  background: #262626;
+}
+.progress-bar .step .bullet.active:after{
+  background: #d43f8d;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+  display: none;
+}
+.progress-bar .step p.active{
+  color: #d43f8d;
+  transition: 0.2s linear;
+}
+.progress-bar .step .check{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active{
+  display: block;
+  color: #fff;
+}
+
+
+    </style>
+
+
+
+  </head>
+  <body>
+    <div class="container">
+      <header>Signup Form</header>
+      <div class="progress-bar">
+        <div class="step">
+          <p>Name</p>
+<div class="bullet"><span>1</span></div>
+<div class="check fas fa-check"></div>
+</div>
+<div class="step"><p>Contact</p>
+<div class="bullet"><span>2</span></div>
+<div class="check fas fa-check"></div>
+</div>
+<div class="step"><p>Birth</p>
+<div class="bullet"><span>3</span></div>
+<div class="check fas fa-check"></div>
+</div>
+<div class="step"><p>Submit</p>
+<div class="bullet"><span>4</span></div>
+<div class="check fas fa-check"></div>
+</div>
+</div>
+
+<div class="form-outer">
+        <form class="main" action="{{ url_for('registration') }}" method="POST" name="form" onsubmit="return first()">
+          <div class="page slide-page">
+            <div class="title">Basic Info:</div>
+<div class="field">
+              <div class="label" >First Name</div>
+<input type="text" name="name" required></div>
+<div class="field">
+              <div class="label">Last Name</div>
+<input type="text"  name="lname" required></div>
+<div class="field">
+              <button class="firstNext next">Next</button>
+            </div>
+</div>
+<div class="page">
+            <div class="title">Contact Info:</div>
+<div class="field">
+              <div class="label">Email Address</div>
+<input type="text" name="email">
+            </div>
+<div class="field">
+              <div class="label">Phone Number</div>
+<input type="Number" name="pno">
+            </div>
+<div class="field btns">
+              <button class="prev-1 prev">Previous</button>
+              <button class="next-1 next">Next</button>
+            </div>
+</div>
+<div class="page">
+            <div class="title">Date of Birth:</div>
+<div class="field">
+              <div class="label">Date</div>
+<input type="text">
+            </div>
+<div class="field">
+              <div class="label">Gender</div>
+<select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+<div class="field btns">
+              <button class="prev-2 prev">Previous</button>
+              <button class="next-2 next">Next</button>
+            </div>
+</div>
+<div class="page">
+            <div class="title">Login Details:</div>
+<div class="field">
+              <div class="label">Username</div>
+<input type="text">
+            </div>
+<div class="field">
+              <div class="label">Password</div>
+<input type="password" name="pwd">
+            </div>
+<div class="field btns">
+              <button class="prev-3 prev">Previous</button>
+              <button class="submit">Submit</button>
+            </div>
+</div>
+</form>
+</div>
+</div>
+
+
+  </body>
+
+    <script>
+
+      <!-- Created By CodingNepal -->
+const slidePage = document.querySelector(".slide-page");
+const nextBtnFirst = document.querySelector(".firstNext");
+const prevBtnSec = document.querySelector(".prev-1");
+const nextBtnSec = document.querySelector(".next-1");
+const prevBtnThird = document.querySelector(".prev-2");
+const nextBtnThird = document.querySelector(".next-2");
+const prevBtnFourth = document.querySelector(".prev-3");
+const submitBtn = document.querySelector(".submit");
+const progressText = document.querySelectorAll(".step p");
+const progressCheck = document.querySelectorAll(".step .check");
+const bullet = document.querySelectorAll(".step .bullet");
+let current = 1;
+
+nextBtnFirst.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-25%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+nextBtnSec.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-50%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+nextBtnThird.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-75%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+submitBtn.addEventListener("click", function(){
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+  setTimeout(function(){
+    alert("Your Form Successfully Signed up");
+    location.reload();
+  },800);
+});
+
+prevBtnSec.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "0%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+prevBtnThird.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-25%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+prevBtnFourth.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-50%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+
+
+    </script>
+
+</html>

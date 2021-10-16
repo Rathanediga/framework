@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>this is contact info</title>
+
+    <style>
+  body
+    {
+    background-image:url({{url_for('static',filename="bg2.png")}});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size:cover;
+	background-position:center;
+    }
+
+    .card-columns{
+    padding:-1000px 100px;
+    margin-left:20%;
+    column-gap:120px;
+
+    }
+
+    h2{
+     margin-left:-120px;
+    width:900px;
+    }
+
+    .card-img-top{
+    height:400px;
+    }
+
+</style>
+
+</head>
+<body>
+
+
+<center>
+   <h2 class="alert alert-success">This is BELONGS to RATHAN EDIGA </h2>
+<div class="card-columns">
+
+
+  <div class="card" style="width:400px">
+     <a target="_blank" href="{{url_for('static',filename="IMG_20200321_135615 (2).jpg")}}">
+    <img class="card-img-top" src="{{url_for('static',filename="IMG_20200321_135615 (2).jpg")}}" alt="Card image" style="width:100%"></a>
+    <div class="card-body">
+      <h4 class="card-title">Rathan Ediga</h4>
+      <p class="card-text"> <b>*<b> Electronics & Communication Engg <br/><b>*<b> JNNCE,Shimogga</p>
+      <a href="/myprofile" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+
+
+   <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20190715_124108.jpg")}}">
+<img class="card-img-top" src="{{url_for('static',filename="IMG_20190715_124108.jpg")}}" alt="Card image" style="width:100%">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">Rathan Ediga</h4>
+      <p class="card-text"> <b>*<b> Electronics & Communication Engg <br/><b>*<b> JNNCE,Shimogga</p>
+      <a href="/myprofile" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+
+
+  <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20190528_103557.jpg")}}">
+   <img class="card-img-top" src="{{url_for('static',filename="IMG_20190528_103557.jpg")}}" alt="Card image" style="width:100%">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">Rathan Ediga</h4>
+      <p class="card-text"> <b>*<b> Electronics & Communication Engg <br/><b>*<b> JNNCE,Shimogga</p>
+      <a href="/myprofile" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+
+
+   <div class="card" style="width:400px">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20190611_120057.jpg")}}">
+<img class="card-img-top" src="{{url_for('static',filename="IMG_20190611_120057.jpg")}}" alt="Card image" style="width:100%">
+</a>
+    <div class="card-body">
+      <h4 class="card-title">Rathan Ediga</h4>
+      <p class="card-text"> <b>*<b> Electronics & Communication Engg <br/><b>*<b> JNNCE,Shimogga</p>
+      <a href="/myprofile" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+
+</center>
+
+
+
+</div>
+
+
+
+</body>
+</html>

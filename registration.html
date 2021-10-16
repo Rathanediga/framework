@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+<title>Bootstrap Example</title>
+
+
+    <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+
+<script src="sweetalert2/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+<script src="sweetalert2.all.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+
+    <script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+
+</script>
+
+
+
+<script type="text/javascript">
+        var changes = false;
+        window.onbeforeunload = function() {
+            if (changes)
+            {
+                var message = "Are you sure you want to navigate away from this page?\n\nYou have started writing or editing a post.\n\nPress OK to continue or Cancel to stay on the current page.";
+                if (confirm(message)) return true;
+                else return false;
+            }
+        }
+    </script>
+
+
+
+<style>
+body
+    {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size:cover;
+	background-position:center;
+    background-image:url({{url_for('static',filename="jhgf.jpg")}})
+        }
+
+
+
+
+#a1
+    {
+         width:700px;
+         color:white;
+         background-color:black;
+         padding:10px 0px 10px 0px;
+         text-align:center;
+         border-radius:15px 15px 0px 0px;
+         margin:auto;
+         border-top: 10px solid #4dff4d;
+
+    }
+
+    .main
+    {
+    width:700px;
+    height:660px;
+    margin:auto;
+    background-color:rgb(0,0,0,0.4);
+    border-radius:0px 0px 30px 30px;
+     }
+
+  .form-group,.enter
+    {
+    padding:20px;
+    color:white;
+    }
+
+
+    #first
+    {
+    width:300px;
+    position:relative;
+    left:8px;
+    top:15px;
+    line-height:auto;
+    border-radius:6px;
+    padding:0px 22px;
+    font-size:16px;
+
+    }
+
+
+     #last
+    {
+    width:300px;
+    float:right;
+    position:relative;
+    right:100px;
+    top:-72px;
+     line-height:auto;
+    border-radius:6px;
+    padding:0px 22px;
+    font-size:16px;
+    margin-bottom:-15px;
+    }
+
+ .container1 {
+     margin-left: -20px;
+     margin-top: -48px;
+
+     }
+
+
+
+ .pagination .page-item.active .page-link,
+ .jsgrid .jsgrid-pager .page-item.active .page-link,
+ .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button .page-link,
+ .jsgrid .jsgrid-pager .active.jsgrid-pager-page .page-link,
+ .pagination .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a,
+ .jsgrid .jsgrid-pager .page-item.active .jsgrid-pager-nav-button a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-item.active a,
+ .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button a,
+ .pagination .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-page a,
+ .jsgrid .jsgrid-pager .page-item.active .jsgrid-pager-page a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-page .page-item.active a,
+ .jsgrid .jsgrid-pager .active.jsgrid-pager-page a,
+ .pagination .page-item:hover .page-link,
+ .jsgrid .jsgrid-pager .page-item:hover .page-link,
+ .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:hover .page-link,
+ .jsgrid .jsgrid-pager .jsgrid-pager-page:hover .page-link,
+ .pagination .page-item:hover .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a,
+ .jsgrid .jsgrid-pager .page-item:hover .jsgrid-pager-nav-button a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-item:hover a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:hover a,
+ .pagination .page-item:hover .jsgrid .jsgrid-pager .jsgrid-pager-page a,
+ .jsgrid .jsgrid-pager .page-item:hover .jsgrid-pager-page a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-page .page-item:hover a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-page:hover a,
+ .pagination .page-item:focus .page-link,
+ .jsgrid .jsgrid-pager .page-item:focus .page-link,
+ .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:focus .page-link,
+ .jsgrid .jsgrid-pager .jsgrid-pager-page:focus .page-link,
+ .pagination .page-item:focus .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a,
+ .jsgrid .jsgrid-pager .page-item:focus .jsgrid-pager-nav-button a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-item:focus a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:focus a,
+ .pagination .page-item:focus .jsgrid .jsgrid-pager .jsgrid-pager-page a,
+ .jsgrid .jsgrid-pager .page-item:focus .jsgrid-pager-page a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-page .page-item:focus a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-page:focus a,
+ .pagination .page-item:active .page-link,
+ .jsgrid .jsgrid-pager .page-item:active .page-link,
+ .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:active .page-link,
+ .jsgrid .jsgrid-pager .jsgrid-pager-page:active .page-link,
+ .pagination .page-item:active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a,
+ .jsgrid .jsgrid-pager .page-item:active .jsgrid-pager-nav-button a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-item:active a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:active a,
+ .pagination .page-item:active .jsgrid .jsgrid-pager .jsgrid-pager-page a,
+ .jsgrid .jsgrid-pager .page-item:active .jsgrid-pager-page a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-page .page-item:active a,
+ .jsgrid .jsgrid-pager .jsgrid-pager-page:active a {
+  background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+     border-color: black;
+     color: #ffffff;
+     border-radius:5px;
+ }
+
+ .page-link {
+     color: black
+ }
+
+
+
+
+.page-item{
+width:80px;
+text-align:center;
+margin-top: 70px;
+}
+
+
+
+#c{
+margin-left:-650px;
+}
+
+#v{
+margin-top:-50px;
+}
+
+#dd{
+color:#fff;
+}
+
+  #dd:hover{
+color:#ffffcc;
+}
+
+
+.input-group-text, .form-control{
+margin-left:-2px;
+border: 2px solid black;
+border-radius:5px;
+}
+
+
+
+.input-group-text{
+background:#4dff4d;
+}
+
+.secondary{
+width:50px;
+height:38px;
+font-size:13px;
+color:black;
+padding:0px;
+background:#4dff4d;
+border: 2px solid black;
+border-radius:5px;
+font-weight:bold;
+}
+
+label{
+font-weight:bold;
+}
+
+
+.btn-warning{
+  background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  border: 1px solid black;
+  color:#fff;
+  margin-left:50px;
+  width:180px;
+
+}
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+<!--
+
+
+<script>
+alert("you are in registration page")
+
+function first()
+{
+var name=form.name.value;
+var lname=form.lname.value;
+var pass=form.pwd.value;
+var pno=form.pno.value;
+
+if(name=="" || lname=="" || pass=="" || pno=="")
+{
+alert("please enter all the details");
+return false;
+}
+
+
+var nmptrn=/^([A-z][a-z]{1,15})$/;
+if(!(nmptrn.test(name)))
+{
+alert("please enter correct first name")
+return false;
+}
+
+var lnmptrn=/^([A-z][a-z]{1,15})$/;
+if(!(lnmptrn.test(lname)))
+{
+alert("please enter last name")
+return false;
+}
+
+
+var pswdptrn=/^(?=.*[A-z])(?=.*[a-z])(?=.*[0-9])(?=.*[!#@$%^&*]).{8,}$/;
+if(!(pswdptrn.test(pass)))
+{
+alert("please enter valid password")
+return false;
+}
+
+var pnptrn=/^([9876][0-9]{9})$/;
+if(!(pnptrn.test(pno)))
+{
+alert("plaese enter correct num")
+return false;
+}
+
+return true;
+}
+
+</script>
+
+-->
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+    <h1 id="a1"><a id="dd" href="/"><i id="c" class="fa fa-angle-double-left" aria-hidden="true"></i></a><p id="v">Registration Page</p></h1>
+  <form class="main" action="{{ url_for('registration') }}" method="POST" name="form" onsubmit="return first()">
+
+    <div id="first" class="form-group">
+      <label>First Name :</label>
+      <div class="input-group mb-3">
+      <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span><input type="text" class="form-control" onchange='changes=true' placeholder="Enter first name" name="name" required>
+      </div></div>
+
+    <div id="last" class="form-group">
+      <label id="g">Last Name :</label>
+        <div class="input-group mb-3">
+      <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span><input type="text" class="form-control" onchange='changes=true' placeholder="Enter last name" name="lname" required>
+        </div></div>
+
+    <div id="d" class="form-group">
+      <label>phno :</label>
+        <div class="input-group mb-3">
+      <span class="input-group-text"><i class="fa fa-phone" aria-hidden="true"></i>
+</span><div>
+            <select class="secondary">
+<option> +91</option>
+<option>+92</option>
+<option>+93</option>
+<option>+94</option>
+<option>+95</option>
+            </select></div>
+      <input type="text" class="form-control"  onchange='changes=true' placeholder="Enter 10 dig pno" name="pno" required>
+        </div></div>
+
+    <div class="form-group">
+      <label for="email">Email :</label><div class="input-group mb-3">
+      <span class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i>
+</span>
+      <input type="email" class="form-control" onchange='changes=true' id="email" placeholder="Enter email" name="email" required>
+    </div></div>
+
+    <div class="form-group">
+      <label for="pwd">Password :</label>
+        <div class="input-group mb-3">
+      <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i>
+</span>
+      <input type="password" onchange='changes=true' class="form-control"  id="pwd" placeholder="Enter password" name="pwd" required>
+        </div></div>
+
+    <a href="/regg2"><button onclick="sweetalertclick()" type="submit" class="btn btn-warning">Save</button></a>
+
+
+<!--
+    <div class="containerr">
+      <div class="wrapper">
+        <div class="image">
+          <img src="">
+        </div>
+<div class="content">
+          <div class="icon">
+<i class="fas fa-cloud-upload-alt"></i></div>
+<div class="text">
+No file chosen, yet!</div>
+</div>
+<div id="cancel-btn">
+<i class="fas fa-times"></i></div>
+<div class="file-name">
+File name here</div>
+</div>
+<button onclick="defaultBtnActive()" id="custom-btn">Choose a file</button>
+      <input id="default-btn" type="file" hidden>
+    </div>
+
+      <script>
+      const wrapper = document.querySelector(".wrapper");
+      const fileName = document.querySelector(".file-name");
+      const defaultBtn = document.querySelector("#default-btn");
+      const customBtn = document.querySelector("#custom-btn");
+      const cancelBtn = document.querySelector("#cancel-btn i");
+      const img = document.querySelector("img");
+      let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+      function defaultBtnActive(){
+        defaultBtn.click();
+      }
+      defaultBtn.addEventListener("change", function(){
+        const file = this.files[0];
+        if(file){
+          const reader = new FileReader();
+          reader.onload = function(){
+            const result = reader.result;
+            img.src = result;
+            wrapper.classList.add("active");
+          }
+          cancelBtn.addEventListener("click", function(){
+            img.src = "";
+            wrapper.classList.remove("active");
+          })
+          reader.readAsDataURL(file);
+        }
+        if(this.value){
+          let valueStore = this.value.match(regExp);
+          fileName.textContent = valueStore;
+        }
+      });
+    </script>
+
+
+
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="custom-control custom-switch" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+	<button onclick="sweetalertclick()" type="submit" class="btn btn-primary">Submit</button>
+
+
+<div class="enter">
+ <div class="form-group form-check">
+      <label class="form-check-label">
+        <input data-toggle="collapse" data-target="#demo" class="form-check-input" type="checkbox" name="remember">    I HEREBY DECLARE THAT THE INFORMATION FURNISHED ABOVE IS TRUE TO THE BEST OF BY KNOWLEDGE AND BELIEF
+   <div id="demo" class="collapse">
+	<br><button onclick="sweetalertclick()" type="submit" class="btn btn-primary">Submit</button>  		</div>
+      </label>
+    </div>
+
+
+
+<script>
+function sweetalertclick(){
+
+swal("Good job!", "You clicked the button!", "success");
+
+}
+</script>
+-->
+
+    <script>
+
+        public class TestMessage {
+
+    public static void main(String[] args) {
+        System.setProperty("webdriver.chrome.driver", "F://chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_onbeforeunload");
+
+        driver.findElement(By.linkText("Click here to go to w3schools.com")).click();
+        System.out.println(driver.switchTo().alert().getText());
+    }
+}
+
+    </script>
+
+
+<!--
+      <div class="enter">
+ <div class="form-group form-check">
+      <label class="form-check-label">
+        <input data-toggle="collapse" data-target="#demo" class="form-check-input" type="checkbox" name="remember">    I HEREBY DECLARE THAT THE INFORMATION FURNISHED ABOVE IS TRUE TO THE BEST OF BY KNOWLEDGE AND BELIEF
+   <div id="demo" class="collapse">
+	<br><button onclick="sweetalertclick()" type="submit" class="btn btn-primary">Submit</button>  		</div>
+      </label>
+    </div>-->
+
+
+<div class="container1">
+
+
+
+
+                        <nav>
+                            <ul class="pagination flex-wrap d-flex justify-content-center">
+                                <li class="page-item"><a class="page-link" href="#" data-abc="true"><i class="fa fa-angle-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="registration" data-abc="true">1</a></li>
+                                <li class="page-item"><a class="page-link" href="/regg" data-abc="true">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#" data-abc="true">3</a></li>
+                                 <li class="page-item"><a class="page-link" href="/regg1" data-abc="true"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	</div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+</form>
+</body>
+</html>

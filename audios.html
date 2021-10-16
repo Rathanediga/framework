@@ -1,0 +1,407 @@
+<!--!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>audio player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+    *
+        {
+        margin:0px;
+        padding:0px;
+        box-sizing:border-box;
+
+        }
+
+
+        body{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
+        background:linear-gradient(#fffde7,#e91e63,#fffde7);
+        }
+
+        .player
+        {
+        position:relative;
+        width:350px;
+        background:#f1f3f4;
+        box-shadow:0 50px 80px rgba(0,0,0,0.25)
+        }
+
+        .player .imgbx
+        {
+        position:relative;
+        width:100%;
+        height:350px;
+        }
+
+        .player .imgbx img
+        {
+
+        position:absolute;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+
+
+        }
+
+        .player audio
+        {
+        width:100%;
+        outline:none;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="player">
+
+    <div class="imgbx">
+        <img src="{{url_for('static',filename="IMG_20200321_135615 (2).jpg")}}"
+    </div>
+    </div>
+
+    <audio controls>
+  <source src="C:\\Users\\RATHAN\\Music\\Arash_-_Broken_Angel.mp3" type="audio/ogg">
+  <source src="C:\\Users\\RATHAN\\Music\\Arash_-_Broken_Angel.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+
+
+
+
+</body>
+</html>
+
+
+-->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+
+    *
+        {
+        margin:0px;
+        padding:0px;
+        box-sizing:border-box;
+
+        }
+
+        .back
+        {
+        width:40vw;
+        height:50vh;
+        }
+
+        .bg
+        {
+        background-image:url({{url_for('static',filename="blur rathan.jpg")}});
+        height:50vw;
+        width:100%;
+        background-size:cover;
+        }
+
+        img
+        {
+        width:100px;
+        height:50px;
+        }
+
+        .player
+        {
+        width:450px;
+        height:700px;
+        transform:translate:(-50%,-50%);
+        background:rgba(255,255,255,0.1);
+        border-radius:10px;
+        margin-left:35%;
+        box-shadow:3px 3px 50px rgba(0,0,0,0.1),-3px -3px 50px rgba(0,0,0,0.5);
+
+        }
+
+
+        .container{
+        width:90%;
+        height:auto;
+        overflow:hidden;
+        }
+
+        .top-icons
+        {
+        display:flex;
+        justify-content:space-between;
+        margin:12px 0;
+        color:#fff;
+        }
+
+        .top-icons a{
+         color:#fff;
+         font-size:1.2em;
+         }
+
+
+         .top-icons a:hover{
+         color:#ff6666;
+         transition:all 0.2s ease-in-out;
+         }
+
+         .img{
+         border-top:4px solid #fff;
+         width:400px;
+
+         }
+
+
+        .img img:hover{
+        box-shadow:3px 3px 50px #e6eeff;
+        }
+
+        .text{
+        text-align:center;
+        margin:0 10px;
+        color:#fff;
+        }
+
+        .text h1{
+        font-size:3em;
+        font-family:Arial;
+        }
+
+
+        .text h3{
+        font-size:1em;
+        font-family:Bernard MT Condensed;
+        }
+
+
+        .time
+        {
+        display:flex;
+        justify-content:space-between;
+        }
+
+        .time a{
+        color:#fff;
+        font-weight:bold;
+        font-size:1em;
+        text-decoration:none;
+        }
+
+        .fill{
+        width:100%;
+        height:4px;
+        background:rgba(255,255,255,0.5);
+        margin:5px 0;
+        position:relative;
+        }
+
+        .fill
+        {
+        width:50%;
+        height:4px;
+        background:rgba(255,255,255,0.7);
+        }
+
+        .handle{
+        width:10px;
+        height:10px;
+        background:rgba(255,255,255,0.8);
+        border-radius:50%;
+        position:absolute;
+        top:-3px;
+        right:100px;
+        }
+
+
+        .btns
+        {
+        margin:28px 0;
+        text-align:center;
+        }
+
+        .btns a{
+        color:#fff;
+        font-size:1.8em;
+        margin:0 10px;
+        transition:all 0.3s ease-in-out;
+        }
+
+        .btns a:hover
+        {
+        color:#ff6666;
+        }
+
+
+        .btns a:nth-child(1), .btns a:nth-child(5)
+        {
+        opacity:0.6;
+        }
+
+
+        .btns a:nth-child(1):hover, .btns a:nth-child(5):hover
+        {
+        opacity:1;
+        color:#ff6666;
+        }
+
+
+        .btns a:nth-child(3){
+        border:2px solid #fff;
+        padding:15px 22px;
+        border-radius:50%;
+        }
+
+        button{
+        font-size:1.8em;
+        font-weight:bold;
+        text-align:center;
+        background:blue;
+        color:black;
+        width:100%;
+        height:50px;
+        font-family:sans-serif;
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+        cursor:pointer;
+        transition:all 0.3s ease-in-out;
+        }
+
+        button:hover{
+        background:green;
+        color:#fff;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+    <title>Audio Player</title>
+</head>
+<body>
+<div class="bg">
+    <section class="player">
+        <div class="container">
+
+
+
+
+
+
+
+            <div class="top-icons">
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#"><i class="far fa-plus"></i></a>
+            </div>
+
+            <div class="img" >
+                <img class="back" src="{{url_for('static',filename="IMG_20200321_135615 (2).jpg")}}" alt="">
+            </div>
+
+            <div class="text">
+                <h1>RCB</h1>
+                <h3>Rathan Ediga</h3>
+            </div>
+
+            <div class="time">
+                <a href="#">1:58</a>
+                <a href="#">3:00</a>
+            </div>
+
+            <div class="seek">
+                <div class="fill"></div>
+                <div class="handle"></div>
+            </div>
+
+            <div class="btns">
+                <a href="#"><i class="fa fa-retweet"></i></a>
+                <a href="Arash_-_Broken_Angel.mp3"><i class="fa fa-backward"></i></a>
+                <a onclick="document.getElementById('player').play()"><i class="fa fa-play"></i></a>
+                <a href="#Arash_-_Broken_Angel.mp3"><i class="fa fa-forward"></i></a>
+                <a href="#"><i class="fa fa-random"></i></a>
+            </div>
+
+
+
+
+        </div>
+
+            <button>play song in the bar</button>
+
+        </div>
+    </section>
+</div>
+
+
+
+
+
+
+</body>
+
+          <audio id="player" src="{{url_for('static',filename="Arash_-_Broken_Angel.mp3")}}"></audio>
+<div>
+	<button >Play</button>
+	<button onclick="document.getElementById('player').pause()">Pause</button>
+	<button onclick="document.getElementById('player').volume+=0.1">Volume Up</button>
+	<button onclick="document.getElementById('player').volume-=0.1">Volume Down</button>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

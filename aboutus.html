@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <style>
+     body
+    {
+    background-image:url({{url_for('static',filename="white-wallpaper.jpg")}});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size:cover;
+	background-position:center;
+    }
+
+    #a{
+        float:right;
+
+        }
+
+        .card{
+        box-shadow: 0 0px 5px 1px #222;
+        }
+
+        h2{
+        text-align:center;
+        font-size: 50px;
+        padding:50px;
+        color:green;
+       text-decoration-line:underline;
+         }
+
+
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+  margin-top:250px;
+
+}
+
+
+.card-header a{
+font-weight:bold;
+color:green;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Reference</h2>
+
+  <div id="accordion">
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+          About Our Website<i id="a" class="fa fa-chevron-down" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+        <div class="card-body">
+          We use cookies to store information about visitor preferences and to record user-specific information on visits and pages the user views so as to provide a custom experience. In regard to third-party advertisers, All Blogging Tips has no access or control over these cookies. You should review the respective privacy policies on any and all third-party ad servers for more information regarding their practices and how to opt-out.
+    If you wish to disable cookies you may do so through your web browser options. Instructions for doing so and for other cookie-related management can be found on the specific web browsers’ websites.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+    How to create website using HTML and CSS?<i id="a" class="fa fa-chevron-down" aria-hidden="true"></i>
+      </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          How to create website using HTML & CSS (+Copy/Paste code) Drafting a Layout. Before starting with any line of code, the first thing you have to do is to create an idea of what... Creating the HTML and CSS Document Structure. After having an idea of what the website is about and what it looks ...
+        <br>
+          <a href="https://www.webcreate.me/how-to-create-website-using-html-and-css-code/">How to create website using HTML & CSS (+Copy/Paste code)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+          How do I view HTML source code?<i id="a" class="fa fa-chevron-down" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          View HTML Source Code: Right-click in an HTML page and select "View Page Source" (in Chrome) or "View Source" (in Edge), or similar in other browsers. This will open a window containing the HTML source code of the page. Inspect an HTML Element:
+        <br>
+          <a href="https://www.w3schools.com/html/html_basic.asp">HTML Basic - W3Schools</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapsefour">
+    HTML Color Picker<i id="a" class="fa fa-chevron-down" aria-hidden="true"></i>
+      </a>
+      </div>
+      <div id="collapsefour" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+         Using the HTML color picker: Click anywhere in the large square to pick a color. You can also use the slider on the right to change the hue. Once you're happy with the color, copy the hexadecimal value from the bottom field (the series of 6 digits/letters in bold (for example #FFFFFF). Alternatively, you can use the RGB values if you prefer (for example, 255,255,255). Adding Colors to Your HTML Documents . Once you've picked your colors, you can apply the colors to your HTML documents or ...
+          <br>
+          <a href="https://www.w3schools.com/colors/colors_picker.asp">HTML Color Picker</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapsefive">
+    Basic template<i id="a" class="fa fa-chevron-down" aria-hidden="true"></i>
+      </a>
+      </div>
+      <div id="collapsefive" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          We have created a responsive starter template with Bootstrap 4.You are free to modify, save, share, and use it in your projects:
+        <br>
+          <a href="https://www.w3schools.com/bootstrap4/bootstrap_templates.asp">template eg:</a></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapsesix">
+         What is submit button in HTML?<i id="a" class="fa fa-chevron-down" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div id="collapsesix" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+         This is how the HTML code above will be displayed in a browser: The Submit Button. <input type="submit"> defines a button for submitting the form data to a form-handler. The form-handler is typically a server page with a script for processing input data.
+           <br>
+          <a href="https://www.w3schools.com/html/html_forms.asp">HTML Forms - W3Schools</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+
+</div>
+
+<div class="footer">
+    <p><strong style="font-size:15px">Note:</strong> The <strong>data-parent</strong> in this collapsable item is for reference purpose.</p>
+</div>
+
+</body>
+</html>

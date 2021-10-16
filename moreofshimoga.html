@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>more info</title>
+
+
+    <style>
+
+
+    body{
+    background-image:url({{url_for('static',filename="white-wallpaper.jpg")}});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size:cover;
+	background-position:center;
+    }
+
+        .cont{
+         width:500px;
+         height:500px;
+         background-color:#66ff66;
+         margin:-550px 700px;
+         box-shadow:8px 8px 2px gray;
+         text-align:center;
+         }
+
+         .cont:hover{
+         padding:10px;
+         width:504px;
+         height:504px;
+         transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+         }
+
+
+         h2{
+         text-align:center;
+         }
+
+         .cont p{
+         color:black;
+         }
+
+         #o{
+         margin-top:-30px;
+         }
+
+         .info{
+         width:700px;
+         height:450px;
+         background-color:#fff;
+         margin:70px -120px;
+         box-shadow:8px 8px 2px gray;
+
+         }
+         .info p{
+              padding:10px;
+                  }
+
+                  .info a:hover{
+              font-size:28px;
+              transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                  }
+
+         .display-3{
+         text-align:center;
+         color:black;
+         text-decoration-line:underline;
+         }
+
+
+         .container a{
+         margin-left:25px;
+         font-size:25px;
+         color:blue;
+         }
+
+         .gallery img
+         {
+         width:350px;
+         margin-left:100px;
+         }
+
+
+        #y{
+        font-size:20px;
+        color:green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="display-3"><b>Malenadu</b></h1>
+    <div class="info">
+        <a href="/wiki">
+            Shimoga-wikipedia
+        </a>
+        <p>
+            Shimoga, officially known as Shivamogga, is a city and the district headquarters of Shimoga district in the central part of the state of Karnataka, India. The city lies on the banks of the Tunga River. Being the gateway for the hilly region of the Western Ghats, the city is popularly nicknamed as "Gateway to Malnad".<a id="y"  href="https://www.bing.com/search?q=shimoga&cvid=60f1ea31e8bf44b38409803b21ec9fb4&pglt=299&FORM=ANNTA1&PC=HCTS"><u>[More]</u></a>
+</p>
+
+
+        <div class="gallery">
+            <a target="_blank" href="{{url_for('static',filename="Shimoga-Tourist-Map.png")}}">
+            <img src="{{url_for('static',filename="Shimoga-Tourist-Map.png")}}"> </a>
+
+    </div>
+
+
+    </div>
+
+
+   <div class="cont">
+       <h2>Shimoga</h2></br>
+<p id="o">namma malenadu</p></br>
+       <p>Shimoga, officially known as Shivamogga, is a city and the district headquarters of Shimoga district in the central part of the state of Karnataka, India. The city lies on the banks of the Tunga River. Being the gateway for the hilly region of the Western Ghats, the city is popularly nicknamed as "Gateway to Malnad". The population of Shimoga city is 322,650 as per 2011 census.</p></br>
+<p>
+<b>Population</b>: 3,22,700 (2011)</br>
+    <b>Area</b>: 70.01 km²</br>
+    <b>Colleges and universities</b>: Kuvempu University · Jawaharlal Nehru National College of Engineering</br>
+    <b>State</b>: Karnataka</p>
+   </div>
+  </div>
+  <br>
+
+
+
+
+
+
+</body>
+</html>

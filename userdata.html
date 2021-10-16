@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USER DATA</title>
+</head>
+
+<style>
+
+    body
+    {
+    background-image:url({{url_for('static',filename="white-wallpaper.jpg")}});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size:cover;
+	background-position:center;
+    }
+
+
+
+    table{
+    margin-left:10%;
+    width:80%;
+    font-weight:bold;
+    font-size:20px;
+
+    }
+
+    h1{
+    margin-left:32%;
+
+    }
+
+
+</style>
+<body>
+
+<h1>User Personal Data</h1>
+<table border="2">
+    <tr>
+        <th>Name</th>
+        <th>last name</th>
+        <th>Password</th>
+        <th>ph no</th>
+        <th>email</th>
+        <th>file</th>
+    </tr>
+
+    {% for info in data %}
+    <tr>
+        <td>{{info[0]}}</td>
+        <td>{{info[1]}}</td>
+        <td>{{info[2]}}</td>
+        <td>{{info[3]}}</td>
+        <td>{{info[4]}}</td>
+        <td>{{info[5]}}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>

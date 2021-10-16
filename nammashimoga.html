@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+
+
+
+
+<style>
+  body
+    {
+    background-image:url({{url_for('static',filename="bg2.png")}});
+    background-size:100%;
+
+
+    }
+
+  b{
+  color:orange;
+  padding-right:10px;
+  font-size:30px;
+  font-weight:900;
+  }
+
+  #image{
+  margin-right:150px;
+  }
+
+  .dropdown-menu a:hover{
+   background-color:rgb(0,0,0,0.8);
+   color:white;
+   font-size:15px;
+   }
+
+
+li a{
+width:150px;
+text-align:center;
+color:black;
+}
+
+
+
+li a:hover
+{
+color:#fff;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #ff8080 0%,#8200f4 100%);
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+font-size:17px;
+
+}
+
+
+
+        h1{
+        color:#fff;
+        margin-top:200px;
+        text-align:center;
+        }
+
+        #l{
+        text-align:center;
+        color:#fff;
+        font-family:Antique Olive Compact;
+        font-size:20px;
+        }
+
+#r{
+ color: #8cff1a;
+ word-spacing:10px;
+ margin-right:8px;
+ }
+
+
+
+footer{
+margin-top:100px;
+}
+
+
+  #w:hover{
+color:#ff6666;
+}
+
+#ww:hover{
+font-size: 110%;
+color:#ff6666;
+}
+
+#w:hover{
+font-size: 180%;
+margin-top:-8px;
+margin-bottom:-8px;
+}
+
+#ww i{
+margin-right:5px;
+}
+
+
+.nav-link{
+font-weight:bold;
+}
+
+</style>
+
+</head>
+<body>
+
+
+
+
+
+  <!--<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top justify-content-center">-->
+    <nav  class="navbar navbar-expand-sm  justify-content-center  fixed-top py-1">
+
+<b>Namma shimogga</b>
+  <img id="image" data-toggle="tooltip" title="jai sree ram" data-placement="bottom" class="rounded-circle" src="{{url_for('static',filename="132202333_189814166036851_8813344673981838343_n.jpg")}}" alt="LOGO" style="width:40px;">
+
+
+
+  <ul class="navbar-nav">
+
+
+
+
+    <li class="nav-item active">
+      <a class="nav-link" data-toggle="tooltip" title="home" data-placement="top" href=""><i id="r" class='fas fa-home' style='font-size:24px'></i>Home</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link"  data-toggle="tooltip" title="places" data-placement="top" href="plcs1"><i id="r" class='fas fa-globe' style='font-size:24px'></i>Places</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link"  data-toggle="tooltip" title="photos" data-placement="top" href="phtos1"><i id="r" class='fas fa-file-image' style='font-size:24px'></i>Photos</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link"  data-toggle="tooltip" title="more" data-placement="top" href="more"><i id="r" class="fa fa-info" style='font-size:24px'></i>More</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link"  data-toggle="tooltip" title="contact info" data-placement="top" href="coinfo1"><i id="r" class='fas fa-phone' style='font-size:24px'></i>contact info</a>
+    </li>
+
+
+
+
+
+
+  </ul>
+
+
+
+</nav>
+
+
+<div <!--style="background:rgba(0,0,0,0.5);padding-top:10px;padding-bottom:140px;"-->>
+  <h1 class="display-2"><p class="font-weight-bolder" style="color:#fff">Welcome To Our</p>  <p class="font-weight-bolder" style="color:yellow">SHIMOGGA</p> Website</h1>
+ <p id="l">"shimogga once is not enough"</p>
+</div>
+
+</div>
+</div>
+
+
+
+<footer class="page-footer bg-dark">
+
+  <div class="bg-success">
+    <div class="container">
+      <div class="row py-4 d-flex align-items-center">
+
+     <div id="q" class="col-md-12 text-center">
+            <a href="#"><i id="w" class="fab fa-facebook-f mr-4"> </i></a>
+            <a href="#"><i id="w" class="fab fa-twitter mr-4"> </i></a>
+            <a href="#"><i id="w" class="fab fa-google-plus-g mr-4"> </i></a>
+            <a href="#"><i id="w" class="fab fa-linkedin-in mr-4"> </i></a>
+            <a href="#"><i id="w" class="fab fa-instagram"> </i></a>
+           </div>
+
+     </div>
+    </div>
+  </div>
+
+  <div class="container text-center text-md-left mt-5">
+    <div class="row">
+
+      <div class="col-md-3 mx-auto mb-4">
+        <h6 id="ww" class="text-uppercase font-weight-bold"><i id="ff" class="fa fa-question" aria-hidden="true"></i>Description</h6>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px">
+        <p class="mt-2">it is completely  based on my knowledge on bootstrap-4,html,css & js.</p>
+      </div>
+
+      <div class="col-md-2 mx-auto mb-4">
+        <h6 id="ww" class="text-uppercase font-weight-bold"><i id="ff" class="fa fa-graduation-cap" aria-hidden="true"></i>Knowledge</h6>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
+
+         <ul class="list-unstyled">
+            <li class="my-2"><a href="https://www.w3schools.com/html/default.asp">Html 5</a></li>
+            <li class="my-2"><a href="https://www.w3schools.com/css/default.asp">Css 3</a></li>
+            <li class="my-2"><a href="https://www.w3schools.com/bootstrap4/default.asp">Bootstrap 4</a></li>
+            <li class="my-2"> <a href="https://www.w3schools.com/js/default.asp">JavaScript</a></li>
+          </ul>
+      </div>
+
+      <div class="col-md-2 mx-auto mb-4">
+        <h6 id="ww" class="text-uppercase font-weight-bold"><i id="ff" class="fa fa-anchor"></i>Useful links</h6>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height: 2px">
+          <ul class="list-unstyled">
+
+             <li class="my-2"><a onclick="myFunction()" href="/">Home</a></li>
+
+           <script type="text/javascript">
+function myFunction() {
+
+  $(window).on('beforeunload', function(){
+var c=confirm();
+if(c){
+  return true;
+}
+else
+return false;
+});
+}
+</script>
+
+            <li class="my-2"><a href="#">About</a></li>
+            <li class="my-2"><a href="/myprofile">Me</a></li>
+            <li class="my-2"> <a href="/cnus">Contact</a></li>
+          </ul>
+      </div>
+
+      <div class="col-md-3 mx-auto mb-4">
+        <h6 id="ww" class="text-uppercase font-weight-bold"><i id="ff" class="fa fa-phone" aria-hidden="true"></i>Contact</h6>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px">
+          <ul class="list-unstyled">
+            <li class="my-2"><i id="ww" class="fas fa-home mr-3"></i> Vidyanagar,shimoga,karnataka</li>
+            <li class="my-2"><i id="ww" class="fas fa-envelope mr-3"></i> rathanediga08@gmail.com</li>
+            <li class="my-2"><i id="ww" class="fas fa-phone mr-3"></i>+91-9611812992</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center py-3">
+    <p>&copy; Copyright
+    <a href="#">Ediga.com</a></p>
+    <p>Designed by Rathan Ediga<br>Use of this website is subject to our <a href="/trms">Terms of Service</a></p> and <a href="#">Privacy Policy.</a></p></p>
+  </div>
+</footer>
+
+
+<!--<h2 class="alert alert-success">welcome--{{ data}}</h2>-->
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <style>
+      *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: top;
+  width:500px;
+  text-align: center;
+  background: #f2f2f2;
+}
+.wrapper{
+  height: 60px;
+  width: 55vw;
+  background: #fff;
+  line-height: 60px;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+}
+.wrapper nav{
+  position: relative;
+  display: flex;
+}
+.wrapper nav label{
+  flex: 1;
+  width: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+.wrapper nav label a{
+  position: relative;
+  z-index: -1;
+  color: #1d1f20;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.6s ease;
+}
+.wrapper nav #user data:checked ~ label.user data a,
+.wrapper nav #dltdata:checked ~ label.dltdata a,
+.wrapper nav #members:checked ~ label.members a,
+.wrapper nav #gallery:checked ~ label.gallery a,
+.wrapper nav #about:checked ~ label.about a{
+  color: #fff;
+}
+.wrapper nav label a i{
+  font-size: 25px;
+  margin: 0 7px;
+}
+.wrapper nav .tab{
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper nav #dltdata:checked ~ .tab{
+  left: 20%;
+}
+.wrapper nav #members:checked ~ .tab{
+  left: 40%;
+}
+.wrapper nav #gallery:checked ~ .tab{
+  left: 60%;
+}
+.wrapper nav #about:checked ~ .tab{
+  left: 80%;
+}
+.wrapper nav input{
+  display: none;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <input type="radio" name="tab" id="user data" checked>
+        <input type="radio" name="tab" id="dltdata">
+        <input type="radio" name="tab" id="members">
+        <input type="radio" name="tab" id="gallery">
+        <input type="radio" name="tab" id="about">
+        <label for="user data" class="user data">
+          <a href="#"><i class="fas fa-home"></i>user data</a>
+        </label>
+
+        <label for="dltdata" class="dltdata"><a href="#">
+          <i class="far fa-comment"></i>dlt data</a>
+        </label>
+
+        <label for="members" class="members">
+          <a href="#"><i class="far fa-envelope"></i>members</a>
+        </label>
+
+        <label for="gallery" class="gallery">
+          <a href="#"><i class="far fa-heart"></i>gallery</a>
+        </label>
+
+        <label for="about" class="about">
+          <a href="#"><i class="far fa-user"></i>About</a>
+        </label>
+
+        <div class="tab">
+</div>
+</nav>
+    </div>
+</body>
+</html>
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+      <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  background: #f2f2f2;
+}
+.wrapper{
+  height: 60px;
+  width: 100vw;
+  background: #fff;
+  line-height: 60px;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+}
+.wrapper nav{
+  position: relative;
+  display: flex;
+}
+.wrapper nav label{
+  flex: 1;
+  width: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+.wrapper nav label a{
+  position: relative;
+  z-index: -1;
+  color: #1d1f20;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.6s ease;
+}
+.wrapper nav #home:checked ~ label.home a,
+.wrapper nav #places:checked ~ label.places a,
+.wrapper nav #places:checked ~ label.places a,
+.wrapper nav #moreaboutshimoga:checked ~ label.moreaboutshimoga a,
+.wrapper nav #contactinfo:checked ~ label.contactinfo a{
+  color: #fff;
+}
+.wrapper nav label a i{
+  font-size: 25px;
+  margin: 0 7px;
+}
+.wrapper nav .tab{
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper nav #places:checked ~ .tab{
+  left: 20%;
+}
+.wrapper nav #photos:checked ~ .tab{
+  left: 40%;
+}
+.wrapper nav #moreaboutshimoga:checked ~ .tab{
+  left: 60%;
+}
+.wrapper nav #contactinfo:checked ~ .tab{
+  left: 80%;
+}
+.wrapper nav input{
+  display: none;
+}
+      </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <input type="radio" name="tab" id="home" checked>
+        <input type="radio" name="tab" id="places">
+        <input type="radio" name="tab" id="photos">
+        <input type="radio" name="tab" id="moreaboutshimoga">
+        <input type="radio" name="tab" id="contactinfo">
+        <label for="home" class="home"><a href="#"><i class="fas fa-home"></i>Home</a></label>
+        <label for="places" class="places"><a href="plcs1"><i class="far fa-comment"></i>places</a></label>
+        <label for="photos" class="photos"><a href="phtos1"><i class="far fa-envelope"></i>photos</a></label>
+        <label for="moreaboutshimoga" class="moreaboutshimoga"><a href="#"><i class="far fa-heart"></i>more about shimoga</a></label>
+        <label for="contactinfo" class="contactinfo"><a href="#"><i class="far fa-user"></i>contact info</a></label>
+        <div class="tab">
+</div>
+</nav>
+    </div>
+</body>
+</html>
+
+-->

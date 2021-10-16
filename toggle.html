@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toggle Button</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+
+        body{
+		background-color: #dbd7d7;
+	}
+	#heading{
+		text-align: center;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 40px;
+		margin-top: 6%;
+	}
+	.main{
+		width: 120px;
+		height: 50px;
+		border-radius: 50px;
+		padding: 1px 0 10px;
+		background-image: url(bg.png);
+		background-size: cover;
+		box-shadow: 2px 1px 5px -1px #000;
+		box-shadow: inset 1px 0px 2px 0px #a3a2a2,
+						  2px 0px 2px -1px #a3a2a2;
+
+		background-color: #fff;
+		border:3px inset #0a81f7;
+		position: absolute;
+		margin: 14% 42%;
+		cursor: pointer;
+
+	}
+	#toggle{
+		transform: translateX(0px);
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		margin: 4px 0px 1px 5px;
+		background-color: #0a81f7;
+		transition: .3s;
+		box-shadow: 1px 1px 4px 1px #a3a2a2,
+					2px 0px 4px 1px #a3a2a2;
+
+	}
+
+    </style>
+
+</head>
+
+<body id="bodybg">
+
+   <h1 id="heading">Toggle Button with Day Night Mode</h1>
+	<div class="main" onclick="togglefunc()">
+		<div id="toggle" ></div>
+	</div>
+<script type="text/javascript">
+
+	function togglefunc(){
+	  var toggle = document.getElementById("toggle").getAttribute("style");
+
+	if (toggle == "transform: translateX(0px);" ) {
+     document.getElementById("toggle").style.transform = "translateX(60px)";
+     document.getElementById("bodybg").style.backgroundColor ="#615c5c";
+     document.getElementById("heading").style.color ="#fff";
+	}
+
+	else {
+     document.getElementById("toggle").style.transform = "translateX(0px)";
+     document.getElementById("bodybg").style.backgroundColor ="#dbd7d7";
+     document.getElementById("heading").style.color ="#000";
+	}
+}
+</script>
+
+</body>
+</html>

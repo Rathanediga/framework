@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>this is contact info</title>
+
+    <style>
+
+    body
+    {
+    background-image:url({{url_for('static',filename="bg1.png")}});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size:cover;
+	background-position:center;
+    }
+
+    .card-body h2{
+    color:#fff;
+    font-family:Antique Olive Compact;
+    }
+
+    h3{
+    font-family:Algerian;
+    margin-left:-15px;
+    width:480px;
+    font-size:38px;
+    word-spacing:5px;
+    }
+
+     p{
+     font-family:Bahnschrift SemiCondensed;
+     color:#fff;
+    }
+
+    .collapse p{
+    position:fixed;
+    color:#fff;
+    }
+
+    #g{
+    margin:10px 40px;
+    word-spacing:2cm;
+    }
+
+
+   .rounded-circle{
+   margin-left:80px;
+   border:5px solid black;
+   margin-top:20px;
+   }
+
+
+   .container{
+   background:rgba(0,0,0,0.5);
+   width:480px;
+   height:650px;
+   margin-top:20px;
+   border-radius:30px;
+   }
+
+
+
+</style>
+
+</head>
+<body>
+
+
+
+
+<div class="container">
+  <center>
+      <h3  class="alert alert-success">This is BELONGS to <br>RATHAN EDIGA   </h3>
+    <div class="card-group" style="width:400px">
+    <img class="rounded-circle" src="{{url_for('static',filename="img1.jpg")}}" alt="Card image" style="width:60%">
+    <div class="card-body">
+      <h2 class="card-title"><b>Rathan Ediga</b></h2>
+      <p class="card-text">   Electronics & Communication Engg <br/>  JNNCE,Shimogga</p>
+
+
+
+
+
+      <button type="button" class="btn btn-success" title="reach me" data-placement="top"data-toggle="collapse" data-target="#demo">contact me</button>
+  <div id="demo" class="collapse">
+      <p id="g">
+
+
+        +91-9611812992        rathanediga08@gmail.com
+
+                        </p>
+  		</div>
+	</div>
+
+
+
+
+    </div>
+  </div>
+  </center>
+
+
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

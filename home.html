@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+
+<style>
+
+	*
+        {
+        margin:0px 0px;
+        padding:0px;
+        box-sizing:border-box;
+
+        }
+
+    body
+    {
+    background-image:url({{url_for('static',filename="bg4.png")}});
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size:cover;
+	background-position:center;
+
+    }
+
+#a1
+{
+background-color:rgb(0,0,0,0.5);
+}
+
+.navbar-brand
+{
+width:800px;
+font-family:Antique Olive Compact;
+}
+
+B
+{
+color:yellow;
+margin-left:20px;
+}
+
+.nav-item
+{
+width:150px;
+}
+
+
+
+.container{
+	width:50%;
+	height:100vh;
+	background-color:rgba(86,86,86,0.3);
+	#backdrop-filter:blur(10px);
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+
+.headlines{
+	color:#fff;
+	width:550px;
+	position:absolute;
+	right:0;
+	top:60%;
+	transform:translateY(-50%);
+}
+
+
+
+.headlines h1{
+	font-size:60px;
+	letter-spacing:10px;
+}
+
+.headlines p{
+	font-size:15px;
+	color:#f0eef1;
+	margin:20px 0;
+	line-height:18px;
+}
+
+input{
+width:50%;
+padding:8px 10px;
+outline:none;
+border:2px solid #fff;
+border-radius:20px;
+background:transparent;
+color:#fff;
+font-size:12px;
+}
+
+::placeholder{
+	color:#ccc;
+}
+
+.user{
+	display:flex;
+	align-items:center;
+}
+
+.user img{
+	width:60px;
+	margin-right:80px;
+	margin-top:100px;
+	cursor:pointer;
+}
+
+button{
+	padding:8px 25px;
+	background:transparent;
+	outline:none;
+	border:2px solid #fff;
+	border-radius:20px;
+	color:#fff;
+	font-size:12px;
+	font-weight:bold;
+	cursor:pointer;
+	margin-top:100px;
+	margin-right:15px;
+}
+
+.rounded
+{
+width:350px;
+margin-top:18px;
+margin-left:200px;
+}
+
+
+#zx
+{
+width:120px;
+border:3px solid rgba(0,0,0,0.5);
+}
+
+.dropdown-menu
+{
+background:rgb(0,0,0,0.5);
+}
+
+.dropdown-menu a
+{
+color:white;
+}
+
+
+
+.slider{
+	display:flex;
+	align-items:center;
+	position:absolute;
+	right:30px;
+	bottom:50px;
+}
+
+#prev,#next{
+	width:30px;
+	cursor:pointer;
+}
+
+.preview{
+	display:flex;
+	align-items:center;
+	margin:0 60px;
+}
+
+.preview img{
+	width:60px;
+	margin:0 10px;
+	opacity:0.4;
+}
+
+.preview .active{
+	display:block;
+	border:3px solid #fff;
+	width:100px;
+	opacity:1;
+}
+
+#v
+{
+margin-left:550px;
+margin-top:520px;
+width:150px;
+height:40px;
+font-size:15px;
+text-align:center;
+border-radius: 50px;
+  background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#l
+{
+color:white;
+padding:10px 80px;
+}
+
+#q{
+color:white;
+font-size:25px;
+}
+
+
+
+#h
+{
+margin:5px 0 0 1400px;
+border-radius: 50px;
+  background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+
+
+
+
+
+.wrapper{
+margin-left:1300px;
+margin-top:200px;
+  height: 60px;
+  width: 200px;
+  position: relative;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 10px;
+  cursor: default;
+  animation: animate 1.5s linear infinite;
+}
+.wrapper .display,
+.wrapper span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .display{
+  z-index: 999;
+  height: 45px;
+  width: 185px;
+  background: #1b1b1b;
+  border-radius: 6px;
+  text-align: center;
+}
+.display #time{
+  line-height: auto;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 450;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 1.5s linear infinite;
+
+}
+@keyframes animate {
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+.wrapper span{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: inherit;
+}
+.wrapper span:first-child{
+  filter: blur(7px);
+}
+.wrapper span:last-child{
+  filter: blur(20px);
+}
+
+
+
+
+marquee{
+width:600px;
+color:white;
+
+}
+
+
+#tt{
+margin-right:5px;
+}
+
+#t{
+margin-right:5px;
+}
+
+
+
+
+</style>
+<script>
+    function wpb_add_preloader() {
+echo '<div id="wptime-plugin-preloader"></div>';
+}
+add_action( 'wp_body_open', 'wpb_add_preloader' );
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="navbar">
+		<img class="rounded" src="{{url_for('static',filename="logo-clipart-hanuman.png")}}">
+		<div class="user">
+
+
+           <a id="q" href="/ind"> <button type="button" data-toggle="tooltip" title="explore new thing" data-placement="top">Login</button></a>
+
+             <!---
+            <a id="q" href="/lgn"> <button id="q" type="button" data-toggle="tooltip" title="login here" data-placement="top">Login</button></a>
+			 -->
+
+			<img  id="zx" class="rounded-circle" src="{{url_for('static',filename="img1.jpg" )}}">
+		</div>
+	</div>
+
+
+	<div class="container">
+		<div class="headlines">
+			<h1>DISCOVER</h1>
+            <p>Hay Everybody, This is <i class="font-weight-bolder">RATHAN EDIGA</i> welcome here for you all. <br>this is completely a responsive website..</p>
+
+			<input type="text" placeholder="search"  href="https://www.google.com/search">
+
+  </div>
+
+
+
+  <div class="btn-group">
+    <button id="h" type="button" class="btn btn-primary dropdown-toggle" title="for more" data-placement="top" data-toggle="dropdown">
+      <i id="tt" class="fa fa-ellipsis-v" aria-hidden="true"></i> MORE
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="reg">registration</a>
+      <a class="dropdown-item" href="/cnus">contact us</a>
+    </div>
+  </div>
+
+
+
+
+        <button onclick="wpb_add_preloader()" id="v" type="button" class="btn btn-success" title="more info" data-placement="top"data-toggle="collapse" data-target="#demo"><i id="t" class="fa fa-info-circle" aria-hidden="true"></i>other info</button>
+  <div id="demo" class="collapse">
+     <marquee width="200"><p id="l">it is completely  based on my knowledge on bootstrap-4,html & css.. the Javascript code which i used in my website is the Source from google.</p></marquee>
+  		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+    <div class="wrapper">
+      <div class="display">
+        <div id="time">
+</div>
+</div>
+<span></span>
+      <span></span>
+    </div>
+<script>
+      setInterval(()=>{
+        const time = document.querySelector(".display #time");
+        let date = new Date();
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        let day_night = "AM";
+        if(hours > 12){
+          day_night = "PM";
+          hours = hours - 12;
+        }
+        if(seconds < 10){
+          seconds = "0" + seconds;
+        }
+        if(minutes < 10){
+          minutes = "0" + minutes;
+        }
+        if(hours < 10){
+          hours = "0" + hours;
+        }
+        time.textContent = hours + ":" + minutes + ":" + seconds + " "+ day_night;
+      });
+    </script>
+
+
+
+<!--
+
+<div id="g">
+<input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+    <div class="wrapperr">
+      <ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Feedback</a></li>
+</ul>
+    </div></div>
+
+
+
+
+.wrapperr{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  clip-path: circle(0px at calc(0% + 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+
+#active:checked ~ .wrapperr{
+clip-path: inset(10% 82% 30% 3%);
+}
+
+
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  background: #fff;
+  color: #4158d0;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+.wrapperr ul{
+  position: absolute;
+  top: 33%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapperr ul li{
+  margin: 15px 0;
+}
+.wrapperr ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.wrapperr ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.wrapperr ul li a:hover:after{
+  transform: scaleY(1);
+}
+.wrapperr ul li a:hover{
+  color: #4158d0;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  width: 100%;
+  color: #202020;
+}
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.content p{
+  font-size: 35px;
+  font-weight: 600;
+}
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+    <div class="slider">
+		<img id="prev" class="thumbnail" src="{{url_for('static',filename="left-arrow.png")}}">
+		<div class="preview">
+		<img class="active thumbnail" src="{{url_for('static',filename="small1.png")}}">
+			<img class="thumbnail" src="{{url_for('static',filename="small2.png")}}">
+			<img class="thumbnail" src="{{url_for('static',filename="small3.png")}}">
+			<img class="thumbnail" src="{{url_for('static',filename="small4.png")}}">
+			<img class="thumbnail" src="{{url_for('static',filename="small5.png")}}">
+		</div>
+		<img id="next" class="thumbnail" src="{{url_for('static',filename="right-arrow.png")}}">
+	</div>
+</div>
+
+
+	<script>
+		var prev=document.getElementById("prev");
+		var next=document.getElementById("next");
+		var thumbnail=document.getElementByClassName("thumbnail");
+		var hero=document.getElementById("hero");
+
+		var backgroundImg=new Array(
+		    "'static',filename="{{url_for('static',filename="bg1.png")}}"
+		    "'static',filename="{{url_for('static',filename="bg2.png")}}"
+		    "'static',filename="{{url_for('static',filename="bg3.png")}}"
+		    "'static',filename="{{url_for('static',filename="bg4.png")}}"
+		    "'static',filename="{{url_for('static',filename="bg5.png")}}"
+		);
+
+		let i=0;
+		next.onclick=function(){
+
+		    if(i<4){
+                hero.style.backgroundImage='url("'+backgroundImg[i+1]+'")';
+                thumbnail[i+1].classList.add("active");
+				thumbnail[i].classList.remove("active");
+                i++;
+
+
+        prev.onclick=function(){
+			if(i>0){
+				hero.style.backgroundImage='url("'+backgroundImg[i-1]+'")';
+				thumbnail[i-1].classList.add("active");
+				thumbnail[i].classList.remove("active");
+				i--;
+
+			}
+		}
+
+
+	</script>
+
+
+
+-->
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

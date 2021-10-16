@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+     body
+    {
+    background-image:url({{url_for('static',filename="white-wallpaper.jpg")}});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size:cover;
+	background-position:center;
+    }
+
+        .qrtiger a {
+    height: 50px;
+    width: 300px;
+    color: #ffffff;
+    background-color: #ff8c2a;
+        }
+
+
+        .qrtiger{
+        margin-left:35%;
+        padding:30px;
+        }
+
+
+
+        .rounded{
+        margin-left:25%;
+
+        width:600px;
+        height:600px;
+        }
+    </style>
+    <script type="text/javascript" src="https://media.qrtiger.com/js/qrtiger_widget.js" async></script>
+<div class="qrtiger"></div>
+
+
+</head>
+<body>
+
+<img class="rounded" src="{{url_for('static',filename="qrcode.png")}}">
+
+</body>
+</html>

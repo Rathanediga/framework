@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<style>
+*
+        {
+        margin:0px;
+        padding:0px;
+        box-sizing:border-box;
+
+
+        }
+
+
+#rs{
+padding:40px;
+margin-top:-40px;
+background-image:url({{url_for('static',filename="white-wallpaper.jpg")}});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size:cover;
+	background-position:center;
+padding-left:6%;
+height:1500px;
+}
+
+
+div.gallery {
+  border: 1px solid #ccc;
+  width:300px;
+  margin:12px 0px;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.1),-3px -3px 5px rgba(0,0,0,0.5);
+  column-gap:40px;
+
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 335px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  background-color:#ffff;
+
+}
+
+
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 25%;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+h1{
+text-align:center;
+color:black;
+font-size:80px;
+text-decoration-line:underline;
+margin-bottom:50px;
+}
+
+
+
+
+.footer {
+  background-color: #0099cc;
+
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px;
+  margin-bottom:-80px;
+  height:100px;
+
+  }
+
+.footer p{
+padding:12px;
+}
+</style>
+</head>
+<div id="rs">
+
+<h1>Image Gallery</h1>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20200321_135615 (2).jpg")}}">
+      <img src="{{url_for('static',filename="IMG_20200321_135615 (2).jpg")}}" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20200930_110041[455.jpg")}}">
+      <img src="{{url_for('static',filename="IMG_20200930_110041[455.jpg")}}" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20190728_145708.jpg")}}">
+      <img src="{{url_for('static',filename="IMG_20190728_145708.jpg")}}" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20191009_160331.jpg")}}">
+      <img src="{{url_for('static',filename="IMG_20191009_160331.jpg")}}" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20190528_103557.jpg")}}">
+      <img src="{{url_for('static',filename="IMG_20190528_103557.jpg")}}" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20190514_134624.jpg")}}">
+      <img src="{{url_for('static',filename="IMG_20190514_134624.jpg")}}" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20190505_130242.jpg")}}">
+      <img src="{{url_for('static',filename="IMG_20190505_130242.jpg")}}" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20190504_080214.jpg")}}">
+      <img src="{{url_for('static',filename="IMG_20190504_080214.jpg")}}" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20190503_084356.jpg")}}">
+      <img src="{{url_for('static',filename="IMG_20190503_084356.jpg")}}" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20190425_111619.jpg")}}">
+      <img src="{{url_for('static',filename="IMG_20190425_111619.jpg")}}" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20190402_205115.jpg")}}">
+      <img src="{{url_for('static',filename="IMG_20190402_205115.jpg")}}" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{url_for('static',filename="IMG_20190311_205505.jpg")}}">
+      <img src="{{url_for('static',filename="IMG_20190311_205505.jpg")}}" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+</div>
+
+
+<div class="footer">
+  <p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+
+</body>
+</html>
